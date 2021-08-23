@@ -1,19 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { Eventing } from './Eventing';
 
-/**
- * HasId interface
- * build
- */
-
-interface HasId {
-  id?: number;
-}
-
-interface HasBuilder<T> {
-  build(): () => T;
-}
-
 export class Collection<T, K> {
   models: T[] = [];
   events: Eventing = new Eventing();
